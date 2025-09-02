@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Responsive Portfolio</title>
+  <style>
+    @keyframes glow {
+      0%, 100% {
+        box-shadow:
+          0 0 25px rgba(236, 72, 153, 0.6),
+          0 0 40px rgba(147, 51, 234, 0.5),
+          0 0 60px rgba(59, 130, 246, 0.5),
+          0 0 80px rgba(34, 197, 94, 0.4);
+      }
+      50% {
+        box-shadow:
+          0 0 40px rgba(236, 72, 153, 0.9),
+          0 0 70px rgba(147, 51, 234, 0.7),
+          0 0 90px rgba(59, 130, 246, 0.7),
+          0 0 110px rgba(34, 197, 94, 0.6);
+      }
+    }
+    .animate-glow {
+      animation: glow 3s infinite alternate;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-black text-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
+
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <span class="text-purple-500 text-xl">👤</span>
+        <h1 class="text-lg sm:text-xl md:text-2xl font-bold tracking-wide bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Pawan Sahu
+        </h1>
+      </div>
+
+           <!-- Links Desktop -->
+      <nav class="hidden md:flex space-x-8 lg:space-x-10 text-base font-medium">
+        <a href="index.html" class="text-2xl text-gray-300 hover:underline decoration-2 underline-offset-4 hover:text-white">Home</a>
+        <a href="/src/project.html" class="text-2xl text-gray-300 hover:underline decoration-2 underline-offset-4 hover:text-white">Projects</a>
+        <a href="/src/Skill.html" class="text-2xl text-gray-300 hover:underline decoration-2 underline-offset-4 hover:text-white">Skills</a>
+      </nav>
+
+      <!-- Button Desktop -->
+      <div class="hidden md:block">
+        <a href="/src/contect.html"
+          class="px-4 py-2 rounded-full font-semibold text-black bg-gradient-to-r from-purple-500 to-pink-500 hover:opacity-90 transition">
+          Contact Us
+        </a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-3xl bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-0 right-0 w-64 h-full bg-gray-900 shadow-lg transform translate-x-full transition-transform duration-300 z-50 p-6">
+    <button id="close-btn" class="text-2xl mb-6">✖</button>
+    <nav class="flex flex-col space-y-6">
+      <a href="index.html" class=" text-lg text-gray-300 hover:underline decoration-2 underline-offset-4 hover:text-white">Home</a>
+      <a href="/src/project.html" class=" text-lg text-gray-300 hover:underline decoration-2 underline-offset-4 hover:text-white">Projects</a>
+      <a href="/src/Skill.html" class=" text-lg text-gray-300 hover:underline decoration-2 underline-offset-4 hover:text-white">Skills</a>
+      <a href="/src/contect.html"
+        class="px-4 py-2 rounded-full font-semibold text-black bg-gradient-to-r from-purple-500 to-pink-500 hover:opacity-90 transition">
+        Contact Us
+      </a>
+    </nav>
+  </div>
+
+  <!-- Projects Section -->
+  <section class="max-w-6xl mx-auto px-6 py-20 mt-20">
+    <h2 class="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+      Project I have done
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      
+      <!-- Project Card 1 -->
+       <a href="https://github.com/pawansahu17112003"> 
+      <div class="p-6 rounded-xl border border-gray-700 shadow-lg shadow-pink-500/100">
+        <h3 class="text-xl font-bold mb-4 text-center">SaleBuddy</h3>
+        <img src="/images/salebuddy.png" alt="salebuddy" class="rounded-md mb-4 mx-auto ">
+        <p><span class="font-bold text-white">Tech:</span> React.js,
+
+Material UI,
+
+Node.js,
+
+Express.js,
+
+MongoDB,
+
+Mongoose,
+
+JWT (Authentication),
+
+Bcrypt.js (Password Security),
+
+Multer (Image Upload),
+
+Razorpay (Payment Integration),
+
+Redux Toolkit / Context API (State Management)</p>
+        <p class="mt-2"><span class="font-bold text-white">Functionality:</span> SaleBuddy is an e-commerce web application where users can browse products, add them to cart or wishlist, and place orders with secure online payment. It includes user authentication, order tracking, and responsive design. An admin panel is also available for managing products, users, and orders.</p>
+      </div>
+      </a>
+
+      <!-- Project Card 2 -->
+        <a href="https://github.com/pawansahu17112003"> 
+      <div class="p-6 rounded-xl border border-gray-700 shadow-lg shadow-pink-500/100">
+        <h3 class="text-xl font-bold mb-4 text-center">QuickCom</h3>
+        <img src="/images/quickcom.png" alt="quickcom" class="rounded-md mb-4 mx-auto">
+        <p><span class="font-bold text-white">Tech:</span> React.js,
+
+Material UI,
+
+Node.js,
+
+Express.js,
+
+MongoDB,
+
+Mongoose,
+
+JWT (Authentication),
+
+Bcrypt.js (Password Security),
+
+Multer (Image Upload),
+
+Razorpay (Payment Integration),
+
+Redux Toolkit / Context API (State Management)</p>
+        <p class="mt-2"><span class="font-bold text-white">Functionality:</span> QuickCom is an online grocery and essentials delivery platform where users can explore categories, search products, and add them to cart or wishlist. It supports secure checkout with multiple payment options, order tracking, and responsive UI for smooth experience. Admin panel helps manage inventory, categories, and customer orders.</p>
+      </div>
+      </a>
+
+      <!-- Project Card 3 -->
+        <a href="https://digital-clock-omega-sepia.vercel.app"> 
+      <div class="p-6 rounded-xl border border-gray-700 shadow-lg shadow-pink-500/100">
+        <h3 class="text-xl font-bold mb-4 text-center">Digital Clock</h3>
+        <img src="/images/clock.png" alt="digital clock" class="rounded-md mb-4 mx-auto">
+        <p><span class="font-bold text-white">Tech:</span> HTML, CSS, JavaScript, React.js, Tailwind CSS</p>
+        <p class="mt-2"><span class="font-bold text-white">Functionality:</span> Digital Clock displays the current time in hours, minutes, and seconds with real-time updates, and also allows users to set alarms that notify them at the chosen time with sound alerts.Features include live time display, dynamic background, and smooth styling for a modern look.A beginner-friendly project that demonstrates JavaScript Date API and DOM manipulation in action.Stylish design makes it both functional and visually appealing.A lightweight digital clock.</p>
+      </div>
+      </a>
+
+    
+     
+
+      <!-- Project Card 4 -->
+        <a href="https://github.com/pawansahu17112003"> 
+      <div class="p-6 rounded-xl border border-gray-700 shadow-lg shadow-pink-500/100">
+        <h3 class="text-xl font-bold mb-4 text-center">Employee Management</h3>
+        <img src="/images/employee.png" alt="Employee Management" class="rounded-md mb-4 mx-auto">
+        <p><span class="font-bold text-white">Tech:</span> Node.js, Express.js, MongoDB, Mongoose, JWT, Bcrypt, MUI, Bootstrap</p>
+        <p class="mt-2"><span class="font-bold text-white">Functionality:</span> Employee Management System manages employee records with features like adding, updating, deleting, and viewing employees, along with secure authentication and role-based access</p>
+      </div>
+        </a>
+
+    
+
+      <!-- Project Card 5 -->
+        <a href="https://github.com/pawansahu17112003"> 
+      <div class="p-6 rounded-xl border border-gray-700 shadow-lg shadow-pink-500/100">
+        <h3 class="text-xl font-bold mb-4 text-center">Food Management</h3>
+        <img src="/images/food.png" alt="Food Management" class="rounded-md mb-4 mx-auto">
+        <p><span class="font-bold text-white">Tech:</span> Node.js, Express.js, MongoDB, Mongoose, JWT, Bcrypt, MUI, Bootstrap </p>
+        <p class="mt-2"><span class="font-bold text-white">Functionality:</span> Manages food items with CRUD operations, user authentication, order management, inventory tracking, and role-based access for admin and staff.Its goal is to minimize food waste and maximize proper utilization.</p>
+      </div>
+        </a>
+
+    
+
+      
+    </div>
+  </section>
+
+   <!-- JS -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const closeBtn = document.getElementById("close-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const overlay = document.getElementById("overlay");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("translate-x-full");
+      overlay.classList.remove("hidden");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.classList.add("translate-x-full");
+      overlay.classList.add("hidden");
+    });
+
+    overlay.addEventListener("click", () => {
+      mobileMenu.classList.add("translate-x-full");
+      overlay.classList.add("hidden");
+    });
+  </script>
+
+</body>
+</html>

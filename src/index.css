@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small custom */
+html, body, #root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* tiny helpers */
+.text-accent {
+  background: linear-gradient(90deg,#f59e0b,#ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
